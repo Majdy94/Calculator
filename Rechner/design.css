@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+
+html {
+  font-size: 125%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+
+  --button-width: 3.2rem;
+  --button-spacing: 0.5rem;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+
+form {
+  box-shadow: 0 0 1rem lightgray;
+  background: #eeeeee;
+  border: 0.1rem solid gray;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  padding: 0.75rem;
+  width: fit-content;
+}
+
+
+div {
+  display: flex;
+  gap: var(--button-spacing);
+}
+
+  div:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+
+
+input, output {
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
+  background: lightgray;
+  font-family: monospace;
+  font-size: 2.2rem;
+}
+
+
+input {
+  appearance: none;
+  border: 0.1rem solid gray;
+  width: var(--button-width);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+  input:active {
+    background: gray;
+    border-color: black;
+  }
+
+  input.selected {
+    border: 0.3rem solid blue;
+  }
+
+
+output {
+  margin-bottom: 0.25rem;
+  padding: 0.3rem 0.5rem;
+  width: calc(4 * var(--button-width) + 3 * var(--button-spacing));
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-color: black;
+}
